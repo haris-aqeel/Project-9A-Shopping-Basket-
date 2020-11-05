@@ -5,11 +5,17 @@ import DeleteIcon from "@material-ui/icons/Delete";
 import Button from '@material-ui/core/Button';
 import notfound from './notfound.png'
 
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { displayState, item } from "../../controller/slicetypes";
+import {Remove_From_Basket} from '../../controller/controllerSlice'
 
 const Checkout = () => {
   let checkout = useSelector((state: displayState) => state.baskets.basket);
+  const dispatch = useDispatch();
+
+  const handleClick = (item: item) => {
+    dispatch(Remove_From_Basket(item))
+  }
 
   return (
     <div>
@@ -36,6 +42,7 @@ const Checkout = () => {
               </div>
               <div style={{textAlign: "center", width: "200px",  margin: "0 auto"}}>
                 <Button
+                  onClick={() => handleClick(curr)}
                   variant="contained"
                   color="secondary"
                   startIcon={<DeleteIcon />}
