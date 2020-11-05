@@ -1,11 +1,11 @@
 // Types used in slice controller
 
 type item = {
-    id: Number;
+    id: string;
     name: string;
-    price: Number;
-    image: string;
-    rating: string;
+    price: number;
+    src: string;
+    quantity: number;
     description: string;
 }
 
@@ -13,7 +13,7 @@ type item = {
 export type State = {
     basket: item[]
   }
-  
+   
 export type Action = {
     payload: item;
     type: string;
