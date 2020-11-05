@@ -59,9 +59,9 @@ const Home = () => {
       <Navbar />
 
       <div className="shoes__data">
-        {ShoesData.map((shoe) => {
+        {ShoesData.map((shoe: item, ind: number) => {
           return (
-            <Card className={classes.root} style={{display: "inline-block"}}>
+            <Card className={classes.root} key={ind} style={{display: "inline-block"}}>
               <CardHeader
                 avatar={
                   <Avatar aria-label="recipe" className={classes.avatar}>

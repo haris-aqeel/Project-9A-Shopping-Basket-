@@ -27,8 +27,6 @@ const useStyles = makeStyles((theme: Theme) =>
 
 function Navbar() {
   const classes = useStyles();
-  const [length, setLength] = React.useState(0);
-  
   const numberOfItems = useSelector((state: displayState)=>(state.baskets.basket.length))
   return (
     <div className={classes.root}>
