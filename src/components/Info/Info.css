@@ -1,0 +1,58 @@
+
+.contact{
+    margin-top: 50px;
+}
+
+.contact_header{
+    font-size: 40px;
+    padding: 10px 0px;
+    font-weight: 400;
+}
+
+.contact_title{
+    color: #868e96;
+    font-size: 18px;
+    line-height: normal;
+    padding: 10px 0;
+}
+
+.contact_aboutme{
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 37px;
+    color: black;
+}
+
+
+.contact_location{
+    line-height: 45px;
+    font-size: 19px;
+}
+
+.contact_opp{
+    padding-bottom: 1rem;
+    line-height: 45px;
+    font-size: 19px;
+}
+
+.image-content-profile {
+    text-align: center;
+    max-width: 100%;
+    height: auto;
+}
+
+.profile-image {
+    border-radius: 60%;
+    border: .5rem solid #6c63ff;
+    margin-left: auto;
+    width: 100%;
+    max-width: 330px;
+    height: auto;
+    box-shadow: 0 30px 30px -30px #000;
+    -webkit-transition: all .3s ease-out;
+    transition: all .3s ease-out;
+}
+
+.right_contact{
+    margin: 60px
+}
