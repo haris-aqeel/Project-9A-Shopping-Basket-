@@ -21,11 +21,10 @@ import {
 
 const useStyles = makeStyles({
   root: {
-    width: 500,
+    backgroundColor: '#efefef',
     margin: "0 auto",
   },
 });
-
 
 const Main = () => {
 

@@ -1,6 +1,9 @@
 import React from "react";
 import Navbar from "../Navbar";
 import { ShoesData } from "./Data";
+import {useDispatch} from 'react-redux';
+import {Add_To_Basket} from '../../controller/controllerSlice';
+import {item} from '../../controller/slicetypes';
 
 import { makeStyles, Theme, createStyles } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
@@ -43,7 +46,13 @@ const useStyles = makeStyles((theme: Theme) =>
 
 const Home = () => {
   const classes = useStyles();
-  
+  const dispatch = useDispatch();
+
+
+  const handleClick = (data: item) => {
+    dispatch(Add_To_Basket(data))
+    
+  }
  
   return (
     <div>
@@ -78,7 +87,7 @@ const Home = () => {
                     <h2>${shoe.price}</h2>
                 </div>
                 <div>    
-                    <IconButton aria-label="add to favorites">
+                    <IconButton aria-label="add to cart" onClick={()=>handleClick(shoe)}>
                     <LibraryAddIcon />
                     </IconButton>
                 </div>
